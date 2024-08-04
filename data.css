@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:weight@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 30px;
+    transition: .3x;
+    opacity: 0;
+    animation: slideTop .3s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+.navbar a:hover,
+.navbar a.active {
+    color: blue;
+}
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 35px;
+
+}
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    animation: slideSci .3s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+.social-media a:hover {
+    border-color: white;
+}
+.social-media a u{
+    font-size: 24px;
+    color: white;
+    transform: rotate(-45deg);
+}
+.Home {
+    position: relative;
+    width: 100x;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+.Home-content {
+    max-width: 630px;
+
+}
+.Home-content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+.Home-content h3 {
+    font-size: 40px;
+    color: blue;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.Home-content p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.6s;
+   
+}
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: blue;
+    border: 2px solid blue;
+    border-radius: 6px;
+    box-shadow: 0 0 10px black;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5x;
+    bottom: 10%;
+}
+.btn:hover {
+    background: transparent;
+    color: blue;
+}
+.Home-img {
+    position: relative;
+    right: -7%;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+}
+.Home-img .rhombus {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 25px solid blue;
+    box-shadow: -15px 15px 15px rgba(0, 0, 0, .4);
+}
+.Home-img .rhombus img {
+    position: absolute;
+    top: 110px;
+    left: -250px;
+    max-width: 750px;
+    transform: rotate(-45deg);
+}
+.Home .rhombus2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background: blue;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.about{
+  padding: 8rem 7% 1.4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #101112;
+}
+.row {
+    display: flex;
+}
+.about img {
+    width: 70%;
+    border-radius: 30px;
+    display: flex;
+    margin: 50px 110px;
+}
+.about-text {
+    padding: 80px 50px;
+    padding-left: 0px;
+    align-items: baseline;
+}
+.about h1 {
+    font-size: 50px;
+    color: blue;
+    font-weight: 300;
+}
+.about h2 {
+    color: wheat;
+    font-weight: 500;
+    font-size: 25px;
+}
+.about h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 23px;
+}
+.about p {
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    width: 60%;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+.about .btn-cv {
+    margin-top: 10px;
+}
+.btn-cv {
+    background-color: #f0f4f2;
+    width: 136px;
+    height: 36px;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+}
+.btn-cv:hover {
+    background: white;
+    transform: translateY(-10px);
+}
+.btn.btn2 {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+}
+.experience {
+    width: 100%;
+    height:1000px;
+    background-color: #101112;
+}
+.my-title {
+    color:blue;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 150px;
+}
+.experience-list {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 100px;
+    padding: 50px 90px;
+    margin-left: 130px;
+}
+.experience-list div {
+    color: white;
+    background-color: #1b1b1b;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    border-radius: 20px;
+    height: 90%;
+    width: 80%;
+    transition: bacground 0.3s, transform 0.5s;
+}
+.experience-list div:hover {
+    background: blue;
+    transform: translateY(-10px);
+}
+.experience-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+
+.contact {
+    background-color: #101112;
+    margin-top: -250px;
+}
+.contact-left {
+    flex-basis: 35%;
+    margin-left: 220px;
+}
+.contact-right {
+    flex-basis: 60%;
+    margin-right: 260px;
+}
+.contact-left p {
+    margin-top: 30px;
+    color: #fff;
+}
+.contact-left p i {
+    color:blue;
+    margin-right: 15px;
+    font-size: 15px;
+}
+.sub-title {
+    text-align: left;
+    color: blue;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: blue;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social-icons a:hover {
+    color: blue;
+    transform: translateY(-5px);
+}
+.contact-right form {
+    width: 100%;
+}
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #272727;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn3 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #1b1b1b;
+    margin-top: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+.copyright i {
+    color: blue;
+}
+.btn3 {
+    background: blue;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+}
+.btn3:hover {
+    background: white;
+}
+
+@media screen and (max-width:1000px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+  .inner-container {
+    width: 100%;
+  }
+} @media screen and (max-width:600px) {
+  .about-section {
+    padding: 0;
+  }
+  .inner-container {
+    padding: 60px;
+  }
+} 
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+@keyframes slideSci {
+    0%{
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+
+    }
+}
+
